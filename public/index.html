@@ -3,49 +3,47 @@
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Needy</title>
+  <title>Here To Help</title>
   <link rel="stylesheet" href="./screen.css">
 </head>
 
 <body>
-  <form action="action_page.php" style="border:1px solid #ccc">
+  <form id="form" style="border:1px solid #ccc">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Fill out the boxes below so we may connect you to a local volunteer!</p>
       <hr>
 
+      <label for="psw">
+        <b>Name</b>
+      </label>
+      <input type="text" placeholder="Enter Your First Name" id="name" name="psw" required>
+
       <label for="email">
-        <b>Phone # or way of contact</b>
+        <b>Phone Number</b>
       </label>
-      <input type="text" placeholder="Contact info" name="email" required>
+      <input type="text" placeholder="Phone Number" id="phone" name="phone" required>
 
-      <label for="psw">
-        <b>First name</b>
-      </label>
-      <input type="text" placeholder="Enter Your First Name" name="psw" required>
-
-      <label for="psw">
-        <b>Last name</b>
-      </label>
-      <input type="text" placeholder="Enter Your Last Name" name="psw" required>
-
-      <label for="psw-repeat">
+      <label for="request">
         <b>Tell Us What Your Issue Is And How We Can Help!</b>
       </label>
-      <input type="text" placeholder="How Can We Help?" name="psw-repeat" required>
-
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
+      <input type="text" placeholder="How Can We Help?" id="request" name="psw-repeat" required>
 
       <p>By Creating An Account You Agree To Our
         <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Submit</button>
+        <button type="button" onclick="postForm()"class="signupbtn">Submit</button>
       </div>
     </div>
   </form>
+
+  <section class="hideForm" id="thankyou">
+    <p>Thanks For Signing Up For Assistance With Metropolitan Ministries.</p>
+    <p>We Will Connect You To A Volunteer!</p>
+    <p>If You Need Urgent Care, Please Dial 911.</p>
+  </section>
+
   <script src="./main.js" charset="utf-8"></script>
 </body>
 
